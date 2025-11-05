@@ -1,0 +1,45 @@
+* {
+    background-color: #e1ded5;
+}
+
+main {
+    display: grid;
+    text-align: center;
+    list-style: none;
+}
+
+main .productos {
+    display: inline-block;
+    text-align: center;
+}
+
+main .productos .img {
+    display: flex;
+    justify-content: center;
+    }
+
+
+section {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+    main .productos .img {
+        display: block;
+        margin: auto;
+        width: 80%;
+        height: auto;
+    }
+    }
+
+
+@media screen and (min-width: 1080px) {
+    main ul {
+        list-style: none;
+    }
+}
+    

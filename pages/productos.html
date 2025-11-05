@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link css   -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Productos</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- banner principal -->
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../img/logo.jfif" alt="logo" width="150px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">FILTROS</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/contactos.html">Contacto</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- contenido principal -->
+    <main>
+        <div class="productos">
+            <h1> Productos </h1>
+            <p style="color: #9a5933;font-family:Georgia, 'Times New Roman', Times, serif;"> Descubrí nuestra colección
+                de
+                vestidos pensada para mujeres con estilo. Desde diseños casuales hasta opciones elegantes para ocasiones
+                especiales, cada prenda combina comodidad, tendencia y calidad. Elegí el modelo que mejor refleje tu
+                personalidad y lucí increíble todos los días. </p>
+            <h2> Vestidos </h2>
+            <div class="img">
+                <img src="../img/vestido3.jfif" alt="" style="width:300px;height:auto;">
+                <div class="img-dos">
+                    <img src="../img/vestido2.jfif" alt="" style="width:300px;height:auto;">
+                </div class="img-dos">
+                <img src="../img/vestido1.jfif" alt="" style="width:290px;height:auto;">
+            </div class="img">
+            <h2>Accesorios</h2>
+            <p style="color: #9a5933;font-family:Georgia, 'Times New Roman', Times, serif;"> Descubrí nuestra colección
+                de
+                bolsos, pensada para acompañarte en cada momento del día. Diseños modernos, prácticos y llenos de estilo
+                que
+                combinan con cualquier look. Desde modelos clásicos hasta las últimas tendencias, encontrá el bolso
+                ideal
+                para realzar tu outfit y destacar tu personalidad. </p>
+            <img src="../img/cartera1.jfif" alt="" style="width:300px;height:auto;">
+            <img src="../img/cartera2.jfif" alt="" style="width:300px;height:auto;">
+            <img src="../img/cartera3.jfif" alt="" style="width:300px;height:auto;">
+        </div>
+
+    </main>
+
+    <!-- contenido secundario -->
+    <footer>
+        <p style="color: #9a5933;font-family:Georgia, 'Times New Roman', Times, serif;"> &copy; 2025 Tienda de Ropa.
+            Todos
+            los derechos reservados. </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
