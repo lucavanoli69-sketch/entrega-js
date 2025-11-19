@@ -1,0 +1,32 @@
+//variables
+@use "../utilities/variables" as *;
+//mixin
+@use "../utilities/mixin" as *;
+
+//estilos del main 
+main {
+    @include main;
+    .productos {
+        display: inline-block;
+        text-align: center;
+        .img {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+// estilos del section 
+
+section {
+    text-align: center;
+    justify-content: center;
+}
+
+// estilos del footer
+
+footer {
+    display: grid;
+    text-align: center;
+    gap: 1.2rem;
+}

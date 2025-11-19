@@ -1,59 +1,56 @@
 /* reset */
 * {
-    background-color: #e1ded5;
+  background-color: #e1ded5;
 }
 
-/* estilos del main */
 main {
-    display: grid;
-    text-align: center;
-    list-style: none;
+  display: grid;
+  text-align: center;
+  list-style: none;
 }
-
 main .productos {
-    display: inline-block;
-    text-align: center;
+  display: inline-block;
+  text-align: center;
+}
+main .productos .img {
+  display: flex;
+  justify-content: center;
 }
 
-main .productos .img {
-    display: flex;
-    justify-content: center;
-    }
-
-
-/* estilos del section */
 section {
-    text-align: center;
+  text-align: center;
+  justify-content: center;
 }
 
 footer {
-    text-align: center;
+  display: grid;
+  text-align: center;
+  gap: 1.2rem;
 }
 
-/* mq tablet*/
 @media screen and (max-width: 780px) {
-    main .productos .img {
-        display: block;
-        margin: auto;
-        width: 80%;
-        height: auto;
-    }
+  main .productos .img {
+    margin: auto;
+    width: 80%;
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: auto;
+  }
 }
-
 /* mq desktop*/
 @media screen and (min-width: 1080px) {
-    main ul {
-        list-style: none;
-    }
+  main ul {
+    list-style: none;
+  }
 }
-
-/* mq mobile*/
 @media screen and (max-width: 480px) {
-    main .productos .img {
-        display: block;
-        margin: 5rem;
-        width: 60%;
-        height: auto;
-    }
+  main .productos .img {
+    display: block;
+    margin: 5rem;
+    width: 60%;
+    height: auto;
+  }
 }
 
+/*# sourceMappingURL=style.css.map */

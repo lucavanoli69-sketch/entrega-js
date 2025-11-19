@@ -1,0 +1,15 @@
+// con parametros 
+
+@mixin margin ($margin, $width) {
+    margin: $margin;
+    width: $width;
+}
+
+
+// sin parametros
+
+@mixin main {
+    display: grid;
+    text-align: center;
+    list-style: none;
+}

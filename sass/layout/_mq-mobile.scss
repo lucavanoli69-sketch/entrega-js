@@ -1,0 +1,15 @@
+//variables
+@use "../utilities/variables" as *;
+//mixin
+@use "../utilities/mixin" as *;
+
+// mq mobile 
+@media screen and (max-width: 480px) {
+    main .productos .img {
+        display: block;
+        margin: 5rem;
+        width: 60%;
+        height: auto;
+    }
+    }
+

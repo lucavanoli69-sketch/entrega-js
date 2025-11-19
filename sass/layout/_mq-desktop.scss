@@ -1,0 +1,11 @@
+//variables
+@use "../utilities/variables" as *;
+//mixin
+@use "../utilities/mixin" as *;
+
+/* mq desktop*/
+@media screen and (min-width: 1080px) {
+    main ul {
+        list-style: none;
+    }
+}

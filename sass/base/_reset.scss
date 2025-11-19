@@ -1,0 +1,6 @@
+@use "../utilities/variables" as *;
+
+/* reset */
+* {
+    background-color: $body-bg;
+}
