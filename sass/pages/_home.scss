@@ -3,17 +3,34 @@
 //mixin
 @use "../utilities/mixin" as *;
 
+//estilos del header
+header {
+    .navbar-toggler :hover {
+        background-color: $color-tipografia;
+        border-color: $color-tipografia;
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+}
+
 //estilos del main 
 main {
     @include main;
+
     .productos {
         display: inline-block;
         text-align: center;
+
         .img {
             display: flex;
             justify-content: center;
         }
     }
+}
+
+main p {
+    color: $color-tipografia;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 // estilos del section 
@@ -23,10 +40,20 @@ section {
     justify-content: center;
 }
 
+section p {
+    color: $color-tipografia;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 // estilos del footer
 
 footer {
     display: grid;
     text-align: center;
     gap: 1.2rem;
+}
+
+footer p {
+    color: $color-tipografia;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

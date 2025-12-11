@@ -3,6 +3,13 @@
   background-color: #e1ded5;
 }
 
+header .navbar-toggler :hover {
+  background-color: #9a5933;
+  border-color: #9a5933;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
 main {
   display: grid;
   text-align: center;
@@ -17,15 +24,30 @@ main .productos .img {
   justify-content: center;
 }
 
+main p {
+  color: #9a5933;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 section {
   text-align: center;
   justify-content: center;
+}
+
+section p {
+  color: #9a5933;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 footer {
   display: grid;
   text-align: center;
   gap: 1.2rem;
+}
+
+footer p {
+  color: #9a5933;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 @media screen and (max-width: 780px) {
