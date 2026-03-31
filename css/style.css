@@ -1,13 +1,30 @@
 /* reset */
+
 * {
-  background-color: #e1ded5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header .navbar-toggler :hover {
+body {
+  background-color: #e1ded5 !important;
+  margin: 0;
+  padding: 0;
+}
+
+header .navbar-toggler:hover {
   background-color: #9a5933;
   border-color: #9a5933;
   transform: scale(1.1);
   transition: 0.3s;
+}
+
+.navbar {
+  background-color: #e1ded5 !important;
+}
+
+.offcanvas {
+  background-color: #e1ded5;
 }
 
 main {
@@ -15,10 +32,12 @@ main {
   text-align: center;
   list-style: none;
 }
+
 main .productos {
-  display: inline-block;
   text-align: center;
+  margin: 0 auto;
 }
+
 main .productos .img {
   display: flex;
   justify-content: center;
@@ -60,12 +79,14 @@ footer p {
     height: auto;
   }
 }
+
 /* mq desktop*/
 @media screen and (min-width: 1080px) {
   main ul {
     list-style: none;
   }
 }
+
 @media screen and (max-width: 480px) {
   main .productos .img {
     display: block;
@@ -74,5 +95,61 @@ footer p {
     height: auto;
   }
 }
+
+
+/* CARRITO */
+
+
+#carrito-box {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  width: 260px;
+  background: #e1ded5;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+#carrito-box {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.btn-eliminar {
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 3px 6px;
+}
+
+.btn-agregar {
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.producto {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 15px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+
 
 /*# sourceMappingURL=style.css.map */

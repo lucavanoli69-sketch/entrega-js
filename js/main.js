@@ -1,94 +1,155 @@
-// CONSTRUCTOR DE PRENDAS
-function Prenda(nombre, precio, talle) {
-    this.nombre = nombre;
-    this.precio = precio;
-    this.talle = talle;
-}
 
-// CREAR ALGUNAS PRENDAS
-const prenda1 = new Prenda("Remera", 25, "M");
-const prenda2 = new Prenda("Buzo", 40, "L");
-const prenda3 = new Prenda("Campera", 80, "XL");
+/// ==========================
+// VARIABLES
+// ==========================
+let carrito = []
 
-// ARRAY DE LA TIENDA
-const tienda = [];
-tienda.push(new Prenda("Pantalón", 50, "M"));
-tienda.push(prenda1, prenda2, prenda3);
+let contenedorCarrito
+let totalElemento
+let contadorElemento
 
 
-// FUNCION PARA MOSTRAR PRODUCTOS
-function mostrarPrendas(arr) {
+// ==========================
+// CARGAR CARRITO DESDE STORAGE
+// ==========================
+function cargarCarrito() {
+    const data = localStorage.getItem("carrito")
 
-    console.log(" PRENDAS DISPONIBLES ");
-
-    for (let i = 0; i < arr.length; i++) {
-
-        console.log(
-            i + " - " +
-            arr[i].nombre +
-            " | Talle: " +
-            arr[i].talle +
-            " | $" +
-            arr[i].precio
-        );
-
-    }
-
-}
-
-
-// FUNCION PARA REALIZAR LA COMPRA
-function comprarPrenda(arr) {
-
-    let opcion = parseInt(prompt("Ingrese el número de la prenda que desea comprar"));
-
-    if (opcion >= 0 && opcion < arr.length) {
-
-        let cantidad = parseInt(prompt("Ingrese la cantidad"));
-
-        let total = arr[opcion].precio * cantidad;
-
-        alert(
-            "Producto: " + arr[opcion].nombre +
-            "\nTalle: " + arr[opcion].talle +
-            "\nCantidad: " + cantidad +
-            "\nTotal: $" + total
-        );
-
-        console.log("Compra realizada correctamente");
-
+    if (data) {
+        carrito = JSON.parse(data)
     } else {
-
-        alert("Producto no válido");
-
+        carrito = []
     }
 
+    renderCarrito()
 }
 
 
-// FUNCION PRINCIPAL DEL SIMULADOR
-function iniciarSimulador() {
-
-    let cliente = prompt("Ingrese su nombre");
-
-    alert("Bienvenido a Tienda Catalina " + cliente);
-
-    let continuar = true;
-
-    do {
-
-        mostrarPrendas(tienda);
-
-        comprarPrenda(tienda);
-
-        continuar = confirm("¿Desea realizar otra compra?");
-
-    } while (continuar);
-
-    alert("Gracias por visitar Tienda Catalina");
-
+// ==========================
+// GUARDAR EN STORAGE
+// ==========================
+function guardarCarrito() {
+    localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
 
-// EJECUTAR EL SIMULADOR
-iniciarSimulador();
+// ==========================
+// AGREGAR PRODUCTO
+// ==========================
+function agregarAlCarrito(id, nombre, precio) {
+    const producto = { id, nombre, precio }
+
+    carrito.push(producto)
+
+    guardarCarrito()
+    renderCarrito()
+}
+
+
+// ==========================
+// ELIMINAR PRODUCTO
+// ==========================
+function eliminarProducto(index) {
+    carrito.splice(index, 1)
+
+    guardarCarrito()
+    renderCarrito()
+}
+
+
+// ==========================
+// VACIAR CARRITO
+// ==========================
+function vaciarCarrito() {
+    carrito = []
+
+    guardarCarrito()
+    renderCarrito()
+}
+
+
+// ==========================
+// MOSTRAR TOTAL
+// ==========================
+function mostrarTotal() {
+    const total = carrito.reduce((acc, prod) => acc + prod.precio, 0)
+
+    totalElemento.innerText = "Total: $" + total
+}
+
+
+// ==========================
+// CONTADOR DE PRODUCTOS
+// ==========================
+function actualizarContador() {
+    contadorElemento.innerText = carrito.length
+}
+
+
+// ==========================
+// RENDER DEL CARRITO
+// ==========================
+function renderCarrito() {
+    if (!contenedorCarrito) return
+
+    contenedorCarrito.innerHTML = ""
+
+    carrito.forEach((producto, index) => {
+        const div = document.createElement("div")
+        div.classList.add("item-carrito")
+
+        div.innerHTML = `
+            <p>${producto.nombre} - $${producto.precio}</p>
+            <button class="btn-eliminar">Eliminar</button>
+        `
+
+        div.querySelector(".btn-eliminar").addEventListener("click", () => {
+            eliminarProducto(index)
+        })
+
+        contenedorCarrito.appendChild(div)
+    })
+
+    mostrarTotal()
+    actualizarContador()
+}
+
+
+// ==========================
+// EVENTOS BOTONES PRODUCTOS
+// ==========================
+function activarBotonesAgregar() {
+    const botones = document.querySelectorAll(".btn-agregar")
+
+    botones.forEach(boton => {
+        boton.addEventListener("click", () => {
+            const id = boton.dataset.id
+            const nombre = boton.dataset.nombre
+            const precio = Number(boton.dataset.precio)
+
+            agregarAlCarrito(id, nombre, precio)
+        })
+    })
+}
+
+
+// ==========================
+// INICIALIZACIÓN
+// ==========================
+document.addEventListener("DOMContentLoaded", () => {
+
+    contenedorCarrito = document.getElementById("carrito")
+    totalElemento = document.getElementById("total")
+    contadorElemento = document.getElementById("contador")
+
+    cargarCarrito()
+    activarBotonesAgregar()
+
+    const btnVaciar = document.getElementById("vaciar-carrito")
+    if (btnVaciar) {
+        btnVaciar.addEventListener("click", vaciarCarrito)
+    }
+})
+
+
+console.log("JS funcionando")
