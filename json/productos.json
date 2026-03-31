@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "nombre": "Vestido Crema",
+        "precio": 3000
+    },
+    {
+        "id": 2,
+        "nombre": "Vestido Azul",
+        "precio": 3500
+    },
+    {
+        "id": 3,
+        "nombre": "Vestido Blanco",
+        "precio": 3200
+    },
+    {
+        "id": 4,
+        "nombre": "Cartera Negra",
+        "precio": 2000
+    },
+    {
+        "id": 5,
+        "nombre": "Cartera Beige",
+        "precio": 2200
+    },
+    {
+        "id": 6,
+        "nombre": "Cartera Marron",
+        "precio": 2100
+    }
+]
