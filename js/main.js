@@ -1,7 +1,7 @@
 
-/// ==========================
+
 // VARIABLES
-// ==========================
+
 let carrito = []
 
 let contenedorCarrito
@@ -9,9 +9,9 @@ let totalElemento
 let contadorElemento
 
 
-// ==========================
+
 // CARGAR CARRITO DESDE STORAGE
-// ==========================
+
 function cargarCarrito() {
     const data = localStorage.getItem("carrito")
 
@@ -25,17 +25,17 @@ function cargarCarrito() {
 }
 
 
-// ==========================
+
 // GUARDAR EN STORAGE
-// ==========================
+
 function guardarCarrito() {
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
 
-// ==========================
+
 // AGREGAR PRODUCTO
-// ==========================
+
 function agregarAlCarrito(id, nombre, precio) {
     const producto = { id, nombre, precio }
 
@@ -46,9 +46,9 @@ function agregarAlCarrito(id, nombre, precio) {
 }
 
 
-// ==========================
-// ELIMINAR PRODUCTO
-// ==========================
+
+// ELIMINAR PRODUCTo
+
 function eliminarProducto(index) {
     carrito.splice(index, 1)
 
@@ -57,9 +57,8 @@ function eliminarProducto(index) {
 }
 
 
-// ==========================
 // VACIAR CARRITO
-// ==========================
+
 function vaciarCarrito() {
     carrito = []
 
@@ -68,9 +67,9 @@ function vaciarCarrito() {
 }
 
 
-// ==========================
+
 // MOSTRAR TOTAL
-// ==========================
+
 function mostrarTotal() {
     const total = carrito.reduce((acc, prod) => acc + prod.precio, 0)
 
@@ -78,17 +77,16 @@ function mostrarTotal() {
 }
 
 
-// ==========================
 // CONTADOR DE PRODUCTOS
-// ==========================
+
 function actualizarContador() {
     contadorElemento.innerText = carrito.length
 }
 
 
-// ==========================
+
 // RENDER DEL CARRITO
-// ==========================
+
 function renderCarrito() {
     if (!contenedorCarrito) return
 
@@ -115,9 +113,9 @@ function renderCarrito() {
 }
 
 
-// ==========================
+
 // EVENTOS BOTONES PRODUCTOS
-// ==========================
+
 function activarBotonesAgregar() {
     const botones = document.querySelectorAll(".btn-agregar")
 
@@ -133,9 +131,9 @@ function activarBotonesAgregar() {
 }
 
 
-// ==========================
+
 // INICIALIZACIÓN
-// ==========================
+
 document.addEventListener("DOMContentLoaded", () => {
 
     contenedorCarrito = document.getElementById("carrito")
