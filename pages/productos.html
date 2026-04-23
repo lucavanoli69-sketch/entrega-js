@@ -3,58 +3,35 @@
 
 <head>
 
-    <!-- Configuracion-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
     <meta name="description" content="Tienda online con productos y precios accesibles.">
     <meta name="keywords" content="tienda, ecommerce, productos, catálogo">
     <meta name="author" content="Luca Vanoli">
 
-    <!-- link css   -->
     <link rel="stylesheet" href="../css/style.css">
 
-    <!-- Título -->
     <title>Productos</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <!-- banner principal -->
-    <header>
-        <nav class="navbar">
-            <div class="container-fluid"> <a class="navbar-brand" href="#"><img src="../img/logo.jfif" alt="logo"
-                        width="150px"></a> <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span> </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">FILTROS</h5> <button type="button"
-                            class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item"> <a class="nav-link active" aria-current="page"
-                                    href="../index.html">Inicio</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="../pages/contactos.html">Contacto</a> </li>
-                        </ul>
-                        <form class="d-flex mt-3" role="search"> <input class="form-control me-2" type="search"
-                                placeholder="Search" aria-label="Search" /> <button class="btn btn-outline-success"
-                                type="submit">Search</button> </form>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+<header>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logo.jfif" alt="logo" width="150px">
+            </a>
+        </div>
+    </nav>
+</header>
 
-    <!-- CARRITO -->
-    <div id="carrito-box">
+<!-- CARRITO -->
+<div id="carrito-box">
     <h3>🛒 Carrito</h3>
 
     <div id="carrito"></div>
@@ -64,86 +41,27 @@
     <p>Productos: <span id="contador">0</span></p>
 
     <button id="vaciar-carrito">Vaciar</button>
+    <button id="finalizar-compra">Finalizar compra</button>
 </div>
 
+<!-- PRODUCTOS DINÁMICOS -->
+<main>
+    <div class="productos">
+        <h1>Productos</h1>
 
-    <!-- productos -->
-    <main>
-        <div class="productos">
-            <h1>Productos</h1>
+        <!-- 🔥 ESTE ES EL IMPORTANTE -->
+        <div id="contenedor-productos"></div>
 
-            <h2>Vestidos</h2>
+    </div>
+</main>
 
-            <div class="producto">
-                <img src="../img/vestido3.jfif" style="width:300px;">
-                <h3>Vestido Crema</h3>
-                <p>$3000</p>
-                <button class="btn-agregar" data-id="1" data-nombre="Vestido Crema" data-precio="3000">
-                    Agregar al carrito
-                </button>
-            </div>
+<footer>
+    <p>&copy; 2025 Tienda de Ropa. Todos los derechos reservados.</p>
+</footer>
 
-            <div class="producto">
-                <img src="../img/vestido2.jfif" style="width:300px;">
-                <h3>Vestido Azul </h3>
-                <p>$3500</p>
-                <button class="btn-agregar" data-id="2" data-nombre="Vestido Azul" data-precio="3500">
-                    Agregar al carrito
-                </button>
-            </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-            <div class="producto">
-                <img src="../img/vestido1.jfif" style="width:300px;">
-                <h3>Vestido Blanco</h3>
-                <p>$3200</p>
-                <button class="btn-agregar" data-id="3" data-nombre="Vestido Blanco" data-precio="3200">
-                    Agregar al carrito
-                </button>
-            </div>
-
-            <h2>Accesorios</h2>
-
-            <div class="producto">
-                <img src="../img/cartera1.jfif" style="width:300px;">
-                <h3>Cartera Negra</h3>
-                <p>$2000</p>
-                <button class="btn-agregar" data-id="4" data-nombre="Cartera Negra" data-precio="2000">
-                    Agregar al carrito
-                </button>
-            </div>
-
-            <div class="producto">
-                <img src="../img/cartera2.jfif" style="width:300px;">
-                <h3>Cartera Beige</h3>
-                <p>$2200</p>
-                <button class="btn-agregar" data-id="5" data-nombre="Cartera Beige" data-precio="2200">
-                    Agregar al carrito
-                </button>
-            </div>
-
-            <div class="producto">
-                <img src="../img/cartera3.jfif" style="width:300px;">
-                <h3>Cartera Marron</h3>
-                <p>$2100</p>
-                <button class="btn-agregar" data-id="6" data-nombre="Cartera Marron" data-precio="2100">
-                    Agregar al carrito
-                </button>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- footer -->
-    <footer>
-        <p>&copy; 2025 Tienda de Ropa. Todos los derechos reservados.</p>
-    </footer>
-
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- TU JS -->
-    <script src="../js/main.js"></script>
+<script src="../js/main.js"></script>
 
 </body>
-
 </html>

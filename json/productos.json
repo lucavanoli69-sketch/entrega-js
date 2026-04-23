@@ -2,31 +2,37 @@
     {
         "id": 1,
         "nombre": "Vestido Crema",
-        "precio": 3000
+        "precio": 3000,
+        "imagen": "../img/vestido3.jfif"
     },
     {
         "id": 2,
         "nombre": "Vestido Azul",
-        "precio": 3500
+        "precio": 3500,
+        "imagen": "../img/vestido2.jfif"
     },
     {
         "id": 3,
         "nombre": "Vestido Blanco",
-        "precio": 3200
+        "precio": 3200,
+        "imagen": "../img/vestido1.jfif"
     },
     {
         "id": 4,
         "nombre": "Cartera Negra",
-        "precio": 2000
+        "precio": 2000,
+        "imagen": "../img/cartera1.jfif"
     },
     {
         "id": 5,
         "nombre": "Cartera Beige",
-        "precio": 2200
+        "precio": 2200,
+        "imagen": "../img/cartera2.jfif"
     },
     {
         "id": 6,
         "nombre": "Cartera Marron",
-        "precio": 2100
+        "precio": 2100,
+        "imagen": "../img/cartera3.jfif"
     }
 ]
